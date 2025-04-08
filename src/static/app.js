@@ -60,7 +60,8 @@ document.addEventListener("DOMContentLoaded", () => {
   signupForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    const email = document.getElementById("email").value;
+    // Get email and normalize to lowercase before submission
+    const email = document.getElementById("email").value.toLowerCase();
     const activity = document.getElementById("activity").value;
 
     try {
