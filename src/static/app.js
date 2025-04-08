@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (details.participants.length > 0) {
           participantsHTML += '<ul class="participants-list">';
           details.participants.forEach(participant => {
-            participantsHTML += `<li>${participant}</li>`;
+            participantsHTML += `<li>${escapeHTML(participant)}</li>`;
           });
           participantsHTML += '</ul>';
         } else {
